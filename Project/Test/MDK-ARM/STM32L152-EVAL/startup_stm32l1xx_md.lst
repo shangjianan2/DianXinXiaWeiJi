@@ -480,12 +480,12 @@ ARM Macro Assembler    Page 8
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\stm32l152-eval\startup_stm32l1xx_md.d -o.\stm32l152-eval\startup
-_stm32l1xx_md.o -IC:\Users\mickey\Desktop\NB-module\program\20180420-V2-½Úµã2×¢
-²á´«Êä\STM32L1xx_StdPeriph_Lib_V1.3.1\Project\Test\MDK-ARM\RTE -IC:\Keil_v5\ARM
-\PACK\Keil\STM32L1xx_DFP\1.2.0 -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__MI
-CROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" --predefine="STM32L151x
-B SETA 1" --list=.\stm32l152-eval\startup_stm32l1xx_md.lst ..\..\..\Libraries\C
-MSIS\Device\ST\STM32L1xx\Source\Templates\arm\startup_stm32l1xx_md.s
+_stm32l1xx_md.o -ID:\STM32L1xx_StdPeriph_Lib_V1.3.1\Project\Test\MDK-ARM\RTE -I
+E:\software\winSeven\MDK\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0 -IE:\software\winSev
+en\MDK\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION
+_VERSION SETA 514" --predefine="STM32L151xB SETA 1" --list=.\stm32l152-eval\sta
+rtup_stm32l1xx_md.lst ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Source\Templ
+ates\arm\startup_stm32l1xx_md.s
 
 
 

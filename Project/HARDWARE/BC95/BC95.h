@@ -1,3 +1,5 @@
+#ifndef _BC95_H_
+#define _BC95_H_
 #include "usart.h"
 #include <stm32l1xx.h>
 void Clear_Buffer(void);//Çå¿Õ»º´æ	
@@ -15,3 +17,5 @@ typedef struct
    uint8_t recdatalen[10];
    uint8_t recdata[100];
 } BC95;
+
+#endif _BC95_H_

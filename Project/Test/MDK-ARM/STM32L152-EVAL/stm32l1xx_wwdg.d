@@ -2,7 +2,7 @@
 .\stm32l152-eval\stm32l1xx_wwdg.o: ..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_wwdg.h
 .\stm32l152-eval\stm32l1xx_wwdg.o: ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\stm32l152-eval\stm32l1xx_wwdg.o: ..\..\..\Libraries\CMSIS\Include\core_cm3.h
-.\stm32l152-eval\stm32l1xx_wwdg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152-eval\stm32l1xx_wwdg.o: E:\software\winSeven\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 .\stm32l152-eval\stm32l1xx_wwdg.o: ..\..\..\Libraries\CMSIS\Include\core_cmInstr.h
 .\stm32l152-eval\stm32l1xx_wwdg.o: ..\..\..\Libraries\CMSIS\Include\core_cmFunc.h
 .\stm32l152-eval\stm32l1xx_wwdg.o: ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

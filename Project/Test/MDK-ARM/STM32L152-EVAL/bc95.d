@@ -1,10 +1,10 @@
 .\stm32l152-eval\bc95.o: ..\..\HARDWARE\BC95\BC95.c
 .\stm32l152-eval\bc95.o: ..\..\HARDWARE\BC95\bc95.h
 .\stm32l152-eval\bc95.o: ..\..\HARDWARE\usart\usart.h
-.\stm32l152-eval\bc95.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\stm32l152-eval\bc95.o: E:\software\winSeven\MDK\ARM\ARMCC\Bin\..\include\stdio.h
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\CMSIS\Include\core_cm3.h
-.\stm32l152-eval\bc95.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152-eval\bc95.o: E:\software\winSeven\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\CMSIS\Include\core_cmInstr.h
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\CMSIS\Include\core_cmFunc.h
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h
@@ -36,5 +36,5 @@
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\inc\stm32l1xx_wwdg.h
 .\stm32l152-eval\bc95.o: ..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\inc\misc.h
 .\stm32l152-eval\bc95.o: ..\main.h
-.\stm32l152-eval\bc95.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\stm32l152-eval\bc95.o: E:\software\winSeven\MDK\ARM\ARMCC\Bin\..\include\string.h
 .\stm32l152-eval\bc95.o: ..\..\HARDWARE\LED\led.h

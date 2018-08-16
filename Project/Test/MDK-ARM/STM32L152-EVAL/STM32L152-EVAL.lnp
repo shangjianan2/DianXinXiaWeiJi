@@ -34,6 +34,7 @@
 ".\stm32l152-eval\usart.o"
 ".\stm32l152-eval\timer.o"
 ".\stm32l152-eval\led.o"
+".\stm32l152-eval\bc95_wjl.o"
 --library_type=microlib --strict --scatter ".\STM32L152-EVAL\STM32L152-EVAL.sct"
 
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols

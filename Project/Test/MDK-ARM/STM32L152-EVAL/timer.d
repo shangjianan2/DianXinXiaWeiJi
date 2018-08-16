@@ -1,9 +1,9 @@
 .\stm32l152-eval\timer.o: ..\..\HARDWARE\TIMER\timer.c
 .\stm32l152-eval\timer.o: ..\..\HARDWARE\usart\usart.h
-.\stm32l152-eval\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\stm32l152-eval\timer.o: E:\software\winSeven\MDK\ARM\ARMCC\Bin\..\include\stdio.h
 .\stm32l152-eval\timer.o: ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\stm32l1xx.h
 .\stm32l152-eval\timer.o: ..\..\..\Libraries\CMSIS\Include\core_cm3.h
-.\stm32l152-eval\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32l152-eval\timer.o: E:\software\winSeven\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 .\stm32l152-eval\timer.o: ..\..\..\Libraries\CMSIS\Include\core_cmInstr.h
 .\stm32l152-eval\timer.o: ..\..\..\Libraries\CMSIS\Include\core_cmFunc.h
 .\stm32l152-eval\timer.o: ..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include\system_stm32l1xx.h

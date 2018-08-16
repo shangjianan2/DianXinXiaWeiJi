@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER, STM32L1XX_MD, USE_STM32L152_EVAL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\;..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include;..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\inc;..\..\..\Utilities\STM32_EVAL;..\..\..\Utilities\STM32_EVAL\Common;..\..\..\Utilities\STM32_EVAL\STM32L152_EVAL;..\..\HARDWARE\usart;..\..\HARDWARE\TIMER;..\..\HARDWARE\BC95;..\..\..\Libraries\CMSIS\Include;..\..\HARDWARE\LED</IncludePath>
+              <IncludePath>..\;..\..\..\Libraries\CMSIS\Device\ST\STM32L1xx\Include;..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\inc;..\..\..\Utilities\STM32_EVAL;..\..\..\Utilities\STM32_EVAL\Common;..\..\..\Utilities\STM32_EVAL\STM32L152_EVAL;..\..\HARDWARE\usart;..\..\HARDWARE\TIMER;..\..\HARDWARE\BC95;..\..\..\Libraries\CMSIS\Include;..\..\HARDWARE\LED;..\..\HARDWARE\wjl</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -772,6 +772,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\HARDWARE\LED\LED.c</FilePath>
             </File>
+            <File>
+              <FileName>bc95_wjl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\HARDWARE\wjl\bc95_wjl.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -784,8 +789,6 @@
         <TargetCommonOption>
           <Device>STM32L152ZC</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32L1xx_DFP.1.2.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x00040000) IRAM(0x20000000,0x00008000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -1542,6 +1545,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\HARDWARE\LED\LED.c</FilePath>
             </File>
+            <File>
+              <FileName>bc95_wjl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\HARDWARE\wjl\bc95_wjl.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -1554,8 +1562,6 @@
         <TargetCommonOption>
           <Device>STM32L152ZD</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32L1xx_DFP.1.2.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x00060000) IRAM(0x20000000,0x0000C000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -2311,6 +2317,11 @@
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\HARDWARE\LED\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>bc95_wjl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\HARDWARE\wjl\bc95_wjl.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3081,6 +3092,11 @@
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\HARDWARE\LED\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>bc95_wjl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\HARDWARE\wjl\bc95_wjl.c</FilePath>
             </File>
           </Files>
         </Group>
