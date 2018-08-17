@@ -11,5 +11,6 @@ void output_usart1(char *p_str);
 int str_contain(char *str_1, char *str_2, int size_1, int size_2);
 void send_printRec(char *str_send);
 void bc95_init_new(void);
+void BC95_Senddata_wjl(uint8_t len,uint8_t *data);
 
 #endif

@@ -3,6 +3,7 @@
 #include "string.h"
 #include "led.h"
 
+
 extern char *strx,*extstrx;
 extern char  RxBuffer[100],RxCounter;
 extern BC95 BC95_Status;
@@ -193,9 +194,10 @@ void send_printRec_2(char *str_send)
 	//strx = "";
 	strx=strstr((const char*)RxBuffer,(const char*)"OK");//¼ì²â×Ö·û´®ÖÐÊÇ·ñÓÐOK,Èç¹ûÓÐ,·µ»ØOKÖ®ºóµÄ×Ö·û´®,·´Ö®·µ»Ø¿Õ
 	//Clear_Buffer();	
-	while(strx==NULL)//Ñ­»·Ö±µ½RxBufferÖÐº¬ÓÐOK
+	while(strstr((const char*)RxBuffer,(const char*)"OK") == NULL || strstr((const char*)RxBuffer,(const char*)"ERROR") != NULL)//Ã»ÓÐOK,»òÕßº¬ÓÐERRORÔò½øÈëÑ­»·
 	{
-		strx=strstr((const char*)RxBuffer,(const char*)"OK");//¼ì²â×Ö·û´®ÖÐÊÇ·ñÓÐOK,Èç¹ûÓÐ,·µ»ØOKÖ®ºóµÄ×Ö·û´®,·´Ö®·µ»Ø¿Õ
+		//strx=strstr((const char*)RxBuffer,(const char*)"OK");//¼ì²â×Ö·û´®ÖÐÊÇ·ñÓÐOK,Èç¹ûÓÐ,·µ»ØOKÖ®ºóµÄ×Ö·û´®,·´Ö®·µ»Ø¿Õ
+		__nop();
 	}
 	output_usart1(RxBuffer);
 	Clear_Buffer();//´òÓ¡Ö®ºóÇå³ý»º´æ
@@ -204,16 +206,47 @@ void send_printRec_2(char *str_send)
 void bc95_init_new(void)
 {
 	send_printRec_2("AT+CMEE=1\r\n");
+	Delay(500);
+	output_usart1("Step1 Over\r\n");
 	send_printRec_2("AT+CFUN=0\r\n");
+	Delay(500);
+	output_usart1("Step2 Over\r\n");
 	send_printRec_2("AT+CGSN=1\r\n");
+	Delay(500);
+	output_usart1("Step3 Over\r\n");
 	send_printRec_2("AT+NCDP=180.101.147.115,5683\r\n");
+	Delay(500);
+	output_usart1("Step4 Over\r\n");
 	send_printRec_2("AT+CFUN=1\r\n");
-	send_printRec_2("AT+NBAND=5\r\n");//Ö®ºóÐèÒªÈ·ÈÏÒ»ÏÂÊÇ²»ÊÇ5
+	//send_printRec_2("AT+NBAND?\r\n");//Ã²ËÆÄ¬ÈÏÖµ¾ÍÊÇ5,¿ÉÒÔÖ±½ÓÊ¹ÓÃÇ5
+	Delay(1500);//
+	output_usart1("Step5 Over\r\n");
 	send_printRec_2("AT+CGATT=1\r\n");
-	send_printRec_2("AT+CGPADDR\r\n");
-	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
-	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
-	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
+	Delay(500);
+	output_usart1("Step6 Over\r\n");
+//	send_printRec_2("AT+CGPADDR\r\n");
+//	output_usart1("Step7 Over\r\n");
+//	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
+//	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
+//	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
+}
+
+void BC95_Senddata_wjl(uint8_t len,uint8_t *data)
+{
+	printf("AT+NMGS=%d,%s\r\n",len,data);//·¢ËÍ0 socketIPºÍ¶Ë¿ÚºóÃæ¸ú¶ÔÓ¦Êý¾Ý³¤¶ÈÒÔ¼°Êý¾Ý,727394ACB8221234
+	//printf("AT+NSOST=0,120.24.184.124,8010,%c,%s\r\n",'8',"727394ACB8221234");//·¢ËÍ0socketIPºÍ¶Ë¿ÚºóÃæ¸ú¶ÔÓ¦Êý¾Ý³¤¶ÈÒÔ¼°Êý¾Ý,
+	Delay(300);
+	strx=strstr((const char*)RxBuffer,(const char*)"OK");//·µ»ØOK
+	while(strx==NULL)
+	{
+		strx=strstr((const char*)RxBuffer,(const char*)"OK");//·µ»ØOK
+	}
+	
+	//ÏòPC·¢ËÍ³É¹¦Ö¸Áî
+	output_usart1(RxBuffer);
+	
+	Clear_Buffer();	
+	
 }
 
 

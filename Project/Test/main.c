@@ -138,47 +138,48 @@ int main(void)
 	TIM3_Int_Init(99,3199);//10ms中断一次
 	TIM4_Int_Init(4999,3199);//500ms中断一次	
 	bc95_init_new();
+	output_usart1("Connect OK\r\n");
 	//BC95_Init_wjl();
 	//send_printRec("AT+NCDP=180.101.147.115,5683\r\n");
-	send_printRec("AT+NCDP?\r\n");
+	//send_printRec("AT+NCDP?\r\n");
 //	BC95_ConUDP();		//利用密钥连接谷雨平台
 //	
 //	sendata[0] = 30;
 	while (1)
 	{
-//		if(uart1_getok==1)
-////		if(1)
-//		{
-//			//BC95发送数据
-//			RxBuffer1[RxCounter1] = 0;
-//			//必须转换为ASCII码传输, 0-9, A-F
-//			for (i=0;i<RxCounter1;i++)
-//			{
-//				uTemp = (RxBuffer1[i]&0xf0)>>4;
-//				if (uTemp<=9)		//number
-//				{
-//					sendata[i*2] = uTemp+0x30;
-//				}
-//				else
-//				{
-//					sendata[i*2] = uTemp+55;		//字母
-//				}
-//				uTemp = RxBuffer1[i]&0x0f;
-//				if (uTemp<=9)		//number
-//				{
-//					sendata[i*2+1] = uTemp+0x30;
-//				}
-//				else
-//				{
-//					sendata[i*2+1] = uTemp+55;		//字母
-//				}
-//			}
-//			sendata[RxCounter1*2] = 0;
-//			BC95_Senddata(RxCounter1,sendata);			//发送测试数据
-//			uart1_getok=0;
-//			RxCounter1=0;
-//		}
-//		Delay(1000);
+		if(uart1_getok==1)
+//		if(1)
+		{
+			//BC95发送数据
+			RxBuffer1[RxCounter1] = 0;
+			//必须转换为ASCII码传输, 0-9, A-F
+			for (i=0;i<RxCounter1;i++)
+			{
+				uTemp = (RxBuffer1[i]&0xf0)>>4;
+				if (uTemp<=9)		//number
+				{
+					sendata[i*2] = uTemp+0x30;
+				}
+				else
+				{
+					sendata[i*2] = uTemp+55;		//字母
+				}
+				uTemp = RxBuffer1[i]&0x0f;
+				if (uTemp<=9)		//number
+				{
+					sendata[i*2+1] = uTemp+0x30;
+				}
+				else
+				{
+					sendata[i*2+1] = uTemp+55;		//字母
+				}
+			}
+			sendata[RxCounter1*2] = 0;
+			BC95_Senddata_wjl(RxCounter1,sendata);			//发送测试数据
+			uart1_getok=0;
+			RxCounter1=0;
+		}
+		Delay(1000);
 	}
 }
 
