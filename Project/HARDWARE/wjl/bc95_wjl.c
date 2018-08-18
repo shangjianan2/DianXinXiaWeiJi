@@ -218,14 +218,15 @@ void bc95_init_new(void)
 	Delay(500);
 	output_usart1("Step4 Over\r\n");
 	send_printRec_2("AT+CFUN=1\r\n");
-	//send_printRec_2("AT+NBAND?\r\n");//√≤À∆ƒ¨»œ÷µæÕ «5,ø…“‘÷±Ω” π”√«5
+	Delay(1500);
+	send_printRec_2("AT+NBAND=5\r\n");//√≤À∆ƒ¨»œ÷µæÕ «5,ø…“‘÷±Ω” π”√«5
 	Delay(1500);//
 	output_usart1("Step5 Over\r\n");
 	send_printRec_2("AT+CGATT=1\r\n");
 	Delay(500);
 	output_usart1("Step6 Over\r\n");
-//	send_printRec_2("AT+CGPADDR\r\n");
-//	output_usart1("Step7 Over\r\n");
+	send_printRec_2("AT+CGPADDR\r\n");
+	output_usart1("Step7 Over\r\n");
 //	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
 //	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
 //	send_printRec_2("AT+NMGS=21,01031001010208000040004000141C0600000068BD");
